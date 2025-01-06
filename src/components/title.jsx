@@ -6,7 +6,7 @@ import Palette from '../components/palette'
 
 const Introduction = () => {
   return (
-    <div className="flex flex-col  bg-gray-50 h-min-screen justify-center  items-center h-screen">
+    <div className="flex flex-col bg-primary h-min-screen justify-center  items-center h-screen">
       <div className="flex flex-col justify-start items-start gap-10">
         {/* Animation pour 1 */}
         <motion.h2
