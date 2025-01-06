@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Palette = () => {
   return (
    <div>
-    <img src="../../public/palette.png" alt="" />
+    {/* <img src="../../public/palette.png" alt="" /> */}
    </div>
   );
 };
