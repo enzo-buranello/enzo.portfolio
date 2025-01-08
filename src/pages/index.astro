@@ -5,6 +5,10 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Introduction from '../components/title'
 import VideoIntro from '../components/videointro'
+import About from '../components/about'
+import Contact from '../components/contact'
+
+
 
 ---
 
@@ -14,10 +18,11 @@ import VideoIntro from '../components/videointro'
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<main class="h-[4000px]">
+		<main class="h-[4000px] bg-primary">
 			<Introduction client:load/>
 			<VideoIntro client:load/>
-			
+			<About client:load/>
+			<Contact client:load/>
 		</main>
 		<Footer />
 	</body>
