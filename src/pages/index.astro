@@ -7,6 +7,9 @@ import Introduction from '../components/title'
 import VideoIntro from '../components/videointro'
 import About from '../components/about'
 import Contact from '../components/contact'
+import DaProject from '../components/daproject'
+import UiSection from '../components/uisection'
+
 
 
 
@@ -18,11 +21,13 @@ import Contact from '../components/contact'
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<main class="h-[4000px] bg-primary">
+		<main class="h-min-content bg-primary">
 			<Introduction client:load/>
 			<VideoIntro client:load/>
 			<About client:load/>
 			<Contact client:load/>
+			<DaProject client:load/>
+			<UiSection client:load/>
 		</main>
 		<Footer />
 	</body>

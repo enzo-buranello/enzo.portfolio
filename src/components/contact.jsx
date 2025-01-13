@@ -12,7 +12,7 @@ const Contact = () => {
 
   return (
     <>
-    <section className='flex flex-col gap-40 h-[800px]  mt-16'>
+    <section className='flex flex-col gap-40 h-min-content mb-60 mt-16'>
 
     <motion.div className=' flex flex-col justify-center items-end gap-3 w-min-content px-40 '
        initial="hidden"
