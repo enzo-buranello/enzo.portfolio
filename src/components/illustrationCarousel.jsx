@@ -12,7 +12,7 @@ const images = [
   "/enzo.portfolio/illustrations/LOGODA-1.png",
   "/enzo.portfolio/illustrations/motif-c.png",
   "/enzo.portfolio/illustrations/motif-puppys.png",
-  "/enzo.portfolio/illustrations/mofifs-floral-enzo.png",
+  "/enzo.portfolio/illustrations/motifs-floral-enzo.png",
   "/enzo.portfolio/illustrations/STORYBOARD.png",
   "/enzo.portfolio/illustrations/affiche-eco-num.jpg",
   "/enzo.portfolio/illustrations/walkman.png",
@@ -25,21 +25,21 @@ const IllustrationCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
+    }, 2000);
     return () => clearInterval(interval); // Cleanup interval on unmount
   }, []);
 
   return (
-    <div style={{ position: "relative", width: "100%", height: "100vh", overflow: "hidden" }}>
+    <div style={{ position: "relative", width: "26.25rem", height: "30rem", overflow: "hidden" }}>
       <AnimatePresence>
         <motion.img
           key={images[currentIndex]}
           src={images[currentIndex]}
           alt=""
-          initial={{ opacity: 0, x: 100 }} // Initial state: off-screen to the right
+          initial={{ opacity: 0, x: 0 }} // Initial state: off-screen to the right
           animate={{ opacity: 1, x: 0 }} // Animate to: fully visible
-          exit={{ opacity: 0, x: -100 }} // Exit state: off-screen to the left
-          transition={{ duration: 0.8 }} // Animation duration
+          exit={{ opacity: 0, x: 0 }} // Exit state: off-screen to the left
+          transition={{ duration: 0.4 }} // Animation duration
           style={{
             position: "absolute",
             width: "100%",
