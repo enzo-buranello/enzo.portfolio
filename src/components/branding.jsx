@@ -16,13 +16,13 @@ const Branding = () => {
       </h2>
     </div>
 
-    <div className="flex flex-row justify-start items-end mt-16  gap-10">
+    <div className="flex flex-row justify-start items-start mt-16  gap-10">
       <div
     
       >
         <img
-          className="object-cover h-[22rem]"
-          src="/enzo.portfolio/enseigne-RS.png"
+          className="object-cover h-[30rem]"
+          src="/enzo.portfolio/affiche-1.png"
           alt=""
         />
       </div>
@@ -31,8 +31,8 @@ const Branding = () => {
 
       >
         <img
-          className="object-cover w-[30rem] h-[35rem]"
-          src="/enzo.portfolio/sac-RS.jpg"
+          className="object-cover h-[15rem]"
+          src="/enzo.portfolio/affiche-2.png"
           alt=""
         />
       </div>
