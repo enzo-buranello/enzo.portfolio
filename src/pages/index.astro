@@ -1,7 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Introduction from '../components/title'
 import VideoIntro from '../components/videointro'
@@ -11,6 +10,9 @@ import DaProject from '../components/daproject'
 import UiSection from '../components/uisection'
 import IllustrationSection from '../components/illustrations'
 import Branding from '../components/branding'
+import Footer from '../components/footer'
+
+
 
 
 
@@ -24,17 +26,17 @@ import Branding from '../components/branding'
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body>
-		<main class="h-min-content bg-primary">
+	<body class=" bg-primary">
+		<main class="h-min-content">
 			<Introduction client:load/>
 			<VideoIntro client:load/>
-			<About client:load/>
+			<About  client:load/>
 			<Contact client:load/>
 			<DaProject client:load/>
 			<UiSection client:load/>
 			<IllustrationSection client:load/>
 			<Branding client:load/>
+			<Footer client:load/>
 		</main>
-		<Footer />
 	</body>
 </html>
