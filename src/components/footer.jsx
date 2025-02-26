@@ -1,12 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import End from '../components/end.jsx';
+
 
 const Footer = () => {
   return (
 <section className='h-min-content flex-col flex justify-center items-center mb-16'>
-<div className="border-t-2 border-gray-300  w-5/6" />
 
-<div className='flex w-full justify-start items-end h-[50rem]'>
+    {/* <div className='flex flex-col justify-between items-center mt-7 '>
+    <End client:load/></div> */}
+   
+
+
+<div className='flex w-full justify-start items-end '>
     <ul className='flex flex-row  gap-10 p-40'>
 
         <li >
@@ -23,6 +29,7 @@ const Footer = () => {
     
     </ul>
 </div>
+
 
 </section>
   );

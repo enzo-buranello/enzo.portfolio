@@ -1,71 +1,38 @@
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 const About = () => {
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
-  const [isHoveringP, setIsHoveringP] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const controls = useAnimation();
+  const imageControls = useAnimation();
+  const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      if (isHovering) {
-        setCursorPos({ x: e.clientX, y: e.clientY });
+    const handleScroll = () => {
+      const section = document.getElementById("about-section");
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight * 0.9 && rect.bottom > 0;
+        setIsInView(isVisible);
       }
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.5 }
-    );
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    const target = document.getElementById("animated-paragraph");
-    if (target) observer.observe(target);
+  useEffect(() => {
+    controls.start({
+      scale: isInView ? 1.2 : 1, // Agrandissement
+      y: isInView ? -30 : 0, // Légère montée
+      transition: { duration: 0.6, ease: "easeInOut" },
+    });
 
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, [isHovering]);
-
-  const characters =
-    "Welcome let's explore a selection of my skills, and the work I’ve crafted. With a focus on Graphic Design, Web Development front-end, and Project Management, I enjoy creating engaging visual experiences that combine creativity and functionality.".split(
-      ""
-    );
+});
 
   return (
-    <section
-      onMouseEnter={() => setIsHovering(true)} // Affiche le curseur personnalisé
-      onMouseLeave={() => setIsHovering(false)} // Cache le curseur personnalisé
-      className={`relative flex flex-col h-min-content justify-start items-start ${
-        isHovering ? "cursor-none" : "" // Cache le curseur natif quand le custom curseur est actif
-      }`}
-    >
-      {/* 🔥 Curseur personnalisé */}
-      <AnimatePresence>
-        {isHovering && (
-          <motion.div
-            className="fixed w-10 h-10 bg-white rounded-full pointer-events-none"
-            style={{
-              top: cursorPos.y,
-              left: cursorPos.x,
-              transform: "translate(-50%, -50%)",
-              mixBlendMode: "difference",
-            }}
-            initial={{ opacity: 0, scale: 0.5 }} // Apparition en fondu
-            animate={{ opacity: 1, scale: isHoveringP ? 2 : 1 }} // Scale uniquement si on survole <p>
-            exit={{ opacity: 0, scale: 0.5 }} // Disparition fluide
-            transition={{ type: "spring", stiffness: 500, damping: 30 }}
-          />
-        )}
-      </AnimatePresence>
-
+    <section id="about-section" className="mb-[6rem] gap-96 ">
       {/* Animation du titre */}
       <motion.h2
         className="text-6xl font-sans text-secondary px-40 py-10"
@@ -82,31 +49,25 @@ const About = () => {
       </motion.h2>
 
       <div className="flex flex-col justify-center items-center gap-10">
-        <div className="border-t-2 border-gray-300 my-4 w-5/6" />
-
-        {/* Texte animé caractère par caractère */}
-        <motion.p
-          id="animated-paragraph"
-          className="text-6xl font-mono font-bold text-secondary text-justify px-40 my-16"
-          onMouseEnter={() => setIsHoveringP(true)} // 🔥 Agrandit le curseur
-          onMouseLeave={() => setIsHoveringP(false)} // 🔥 Rétrécit le curseur
+        {/* Conteneur animé */}
+        <motion.div
+          className="flex flex-col justify-between items-center bg-secondary pt-10 rounded-xl w-2/3"
+          animate={controls} // Contrôle l'animation de scale et mouvement vers le haut
         >
-          {isVisible &&
-            characters.map((char, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{
-                  delay: index * 0.02,
-                }}
-              >
-                {char}
-              </motion.span>
-            ))}
-        </motion.p>
+          {/* Image animée avec scale et rebond */}
+          <div className="">
+            <img src="/enzo.portfolio/ampoule.png" alt="Ampoule" />
+          </div>
 
-        <div className="border-t-2 border-gray-300 w-5/6" />
+          <div className="border-t-2 border-primary opacity-20 w-3/6" />
+
+          {/* Texte */}
+          <p className="text-3xl font-poppins text-primary text-justify px-10 my-10">
+            Welcome let's explore a selection of my skills, and the work I’ve crafted. 
+            With a focus on Graphic Design, Web Development front-end, and Project Management, 
+            I enjoy creating engaging visual experiences that combine creativity and functionality.
+          </p>
+        </motion.div>
       </div>
     </section>
   );
