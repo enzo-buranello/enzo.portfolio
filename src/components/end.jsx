@@ -6,7 +6,7 @@ const End = () => {
   return (
 
   <>
-  <section className='h-80 flex-col flex justify-between items-center mb-16 pt-16'>
+  <section className='h-80 flex-col flex justify-between items-center mb-16 px-40 pt-16'>
 
   <div className="border-t-2 border-gray-300  w-5/6" />
 

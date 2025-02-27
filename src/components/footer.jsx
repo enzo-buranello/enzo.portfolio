@@ -5,7 +5,7 @@ import End from '../components/end.jsx';
 
 const Footer = () => {
   return (
-<section className='h-min-content flex-col flex justify-center items-center mb-16'>
+<section className='h-min-content flex-col flex justify-center items-center mt-44'>
 
     {/* <div className='flex flex-col justify-between items-center mt-7 '>
     <End client:load/></div> */}
