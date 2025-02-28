@@ -4,6 +4,7 @@ import Memoji from '../components/avatar-1';
 import Palette from '../components/palette';
 import Barre from '../components/barre';
 
+
 const Introduction = () => {
   const [cursorPosEnzo, setCursorPosEnzo] = useState({ x: 0, y: 0 });
   const [isVisibleEnzo, setIsVisibleEnzo] = useState(false);

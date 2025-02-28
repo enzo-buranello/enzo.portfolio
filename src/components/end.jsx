@@ -16,7 +16,7 @@ const End = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ type: "spring", stiffness: 100, damping: 10 }}
       viewport={{ once: true, amount: 0.9 }} // 90% visible pour déclencher l'animation
-      className="font-sans text-secondary text-[4rem] flex flex-wrap gap-7 justify-center items-center"
+      className="font-sans text-secondary text-[4rem] flex flex-wrap gap-7 justify-center items-center pt-28"
     >
       {/** Animation de chaque mot séparément */}
       {["Let", "your", "imagination", "run", "free…"].map((word, index) => (

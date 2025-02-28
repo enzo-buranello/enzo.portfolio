@@ -12,16 +12,16 @@ const Contact = () => {
 
   return (
     <>
-    <section className='flex flex-col gap-40 h-min-content mb-60 mt-16'>
+    <section className='flex flex-col gap-40 h-min-content mb-60 '>
 
-    <motion.div className=' flex flex-col justify-center items-end gap-3 w-min-content px-40 '
+    <motion.div className=' flex flex-col justify-center items-end gap-3 w-min-content  px-40 '
        initial="hidden"
        whileInView="visible"
        variants={h2Variants}
        transition={{ duration: 0.6, ease: 'easeOut' }}
        viewport={{ once: true, amount: 0.5 }}>
 
-        <h2 className='flex flex-row text-5xl text-secondary font-sans gap-4  '>Let’s make <span className='opacity-50'> contact</span> </h2>
+        <h2 className='flex flex-row text-5xl text-secondary font-sans gap-4 pt-14 '>Let’s make <span className='opacity-50'> contact</span> </h2>
         <h2 className=' text-5xl text-secondary font-sans'>...</h2>
     </motion.div>
     

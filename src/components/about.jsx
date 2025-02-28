@@ -44,7 +44,7 @@ const About = () => {
     <section id="about-section" className="my-[6rem] flex justify-center items-center">
       {/* Conteneur animé */}
       <motion.div
-        className="flex flex-col justify-center items-center bg-secondary w-3/4 h-min py-20 rounded-xl px-10"
+        className="flex flex-col justify-center items-center bg-secondary w-3/4 h-min py-20 rounded-xl"
         animate={controls}
       >
         {/* Image */}

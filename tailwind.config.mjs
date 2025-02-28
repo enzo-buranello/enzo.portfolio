@@ -9,10 +9,8 @@ export default {
 				
 			  },
 			  fontFamily: {
-				// Déclare une famille de polices personnalisée
-				'sans': ['Playfair Display', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-				'serif': ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
-				'mono': ['"Roboto Mono"', 'Courier', 'monospace'],
+				sans: ['Playfair Display', 'ui-sans-serif', 'system-ui'],
+				serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
 			  },
 		},
 	},
