@@ -93,7 +93,7 @@ const Introduction = () => {
       {/* Fenêtre flottante pour "Enzo" */}
       {isVisibleEnzo && (
         <motion.div
-          className="fixed bg-white text-black px-4 py-2 rounded-lg shadow-lg"
+          className="fixed font-serif bg-white text-black px-4 py-2 rounded-lg shadow-lg"
           style={{ top: cursorPosEnzo.y + 10, left: cursorPosEnzo.x + 10 }}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -107,7 +107,7 @@ const Introduction = () => {
       {/* Fenêtre flottante pour "graphic design" */}
       {isVisibleDesign && (
         <motion.div
-          className="fixed bg-white text-black px-4 py-2 rounded-lg shadow-lg"
+          className="fixed font-serif bg-white text-black px-4 py-2 rounded-lg shadow-lg"
           style={{ top: cursorPosDesign.y + 10, left: cursorPosDesign.x + 10 }}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}

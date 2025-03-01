@@ -26,7 +26,7 @@ const Branding = () => {
       <div className="flex flex-row justify-start items-start mt-16 gap-10">
         {/* Première image */}
         <div
-          onMouseEnter={() => setHoveredImage("Affiche publicitaire pour une campagne de communication visuelle.")}
+          onMouseEnter={() => setHoveredImage("Branding starts by understanding the company and what it wants to communicate. Then, I create visual elements like the logo, colors, and typography to build a clear and recognizable identity. The goal is to make the brand stand out and reflect its values, while staying adaptable to different platforms. ✍️ ✨")}
           onMouseLeave={() => setHoveredImage(null)}
           onMouseMove={handleMouseMove}
         >
@@ -39,7 +39,7 @@ const Branding = () => {
 
         {/* Deuxième image */}
         <div
-          onMouseEnter={() => setHoveredImage("Affiche minimaliste avec une approche typographique moderne.")}
+          onMouseEnter={() => setHoveredImage("Branding starts by understanding the company and what it wants to communicate. Then, I create visual elements like the logo, colors, and typography to build a clear and recognizable identity. The goal is to make the brand stand out and reflect its values, while staying adaptable to different platforms. ✍️ ✨")}
           onMouseLeave={() => setHoveredImage(null)}
           onMouseMove={handleMouseMove}
         >
@@ -54,7 +54,7 @@ const Branding = () => {
       {/* Texte flottant qui suit le curseur */}
       {hoveredImage && (
         <motion.div
-          className="fixed bg-white text-black px-4 py-2 rounded-lg shadow-lg"
+          className="fixed font-serif bg-white text-black px-4 py-2 rounded-lg shadow-lg"
           style={{
             top: cursorPos.y + 10,
             left: cursorPos.x + 10,

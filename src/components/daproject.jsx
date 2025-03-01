@@ -78,7 +78,7 @@ const DaProject = () => {
       {/* Texte flottant qui suit la souris */}
       {hoveredImage && (
         <motion.div
-          className="fixed bg-white text-black px-4 py-2 rounded-lg shadow-lg"
+          className="fixed font-serif bg-white text-black px-4 py-2 rounded-lg shadow-lg"
           style={{
             top: cursorPos.y + 10,
             left: cursorPos.x + 10,
@@ -90,8 +90,10 @@ const DaProject = () => {
           transition={{ duration: 0.2 }}
         >
           {hoveredImage === "image1"
-            ? "Enseigne RS – Un projet de signalétique moderne et impactant."
-            : "Sac RS – Un design épuré alliant esthétique et fonctionnalité."}
+            ? " 🔎 For any design project, I start by exploring ideas (like a whisky bar) and analyzing the competition to understand the market. I define my target audience (personae) to tailor my approach. I create a story around my brand and offer an experience that resonates with this audience. Finally, I choose the right communication channels to effectively promote my brand and adapt its identity across the selected platforms. 📢"
+
+            
+            : "✏️ I start by exploring images, words, and emotions to fuel my inspiration. I look for a story to tell, a message to share, and then translate it into sketches and visual compositions. I test, refine shapes and colors to give meaning to the whole. Once the concept is ready, I adapt it to print and web formats, making sure it keeps its impact and coherence. "}
         </motion.div>
       )}
     </section>

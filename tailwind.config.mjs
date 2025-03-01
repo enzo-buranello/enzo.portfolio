@@ -10,7 +10,7 @@ export default {
 			  },
 			  fontFamily: {
 				sans: ['Playfair Display', 'ui-sans-serif', 'system-ui'],
-				serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+				serif: ['Raleway', 'ui-sans-serif', 'system-ui'],
 			  },
 		},
 	},

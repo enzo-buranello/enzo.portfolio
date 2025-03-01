@@ -45,7 +45,7 @@ const IllustrationSection = () => {
       {/* Texte flottant qui suit la souris */}
       {isHovered && (
         <motion.div
-          className="fixed bg-white text-black px-4 py-2 rounded-lg shadow-lg"
+          className="fixed font-serif bg-white text-black px-4 py-2 rounded-lg shadow-lg"
           style={{
             top: cursorPos.y + 10,
             left: cursorPos.x + 10,
@@ -56,7 +56,7 @@ const IllustrationSection = () => {
           exit={{ opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.2 }}
         >
-          Découvrez une sélection d'illustrations numériques et vectorielles 🎨✨
+          For digital painting, I usually start by looking for images that inspire me before creating my sketches and illustrations on a graphic tablet. Other times, I don’t need any reference images my imagination is enough. 🎨✨
         </motion.div>
       )}
     </section>

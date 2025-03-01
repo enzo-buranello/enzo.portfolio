@@ -16,7 +16,7 @@ const Footer = () => {
     <ul className='flex flex-row  gap-10 p-40'>
 
         <li >
-            <a className='font-mono text-5xl text-secondary' href="">mail</a>
+            <a className='font-mono text-5xl text-secondary' href="mailto:enzo.buranello.pro@gmail.com">mail</a>
         </li>
 
         <li>
@@ -24,7 +24,7 @@ const Footer = () => {
         </li>
 
         <li>
-            <a className='font-mono text-5xl text-secondary' href="">dribbble</a>
+            <a className='font-mono text-5xl text-secondary' href="https://dribbble.com/enooui">dribbble</a>
         </li>
     
     </ul>
