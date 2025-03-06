@@ -16,15 +16,15 @@ const Footer = () => {
     <ul className='flex flex-row  gap-10 p-40'>
 
         <li >
-            <a className='font-mono text-5xl text-secondary' href="mailto:enzo.buranello.pro@gmail.com">mail</a>
+            <a className='font-mono text-5xl text-secondary hover:opacity-50 hover:text-secondary' href="mailto:enzo.buranello.pro@gmail.com">mail</a>
         </li>
 
         <li>
-            <a className='font-mono text-5xl text-secondary' href="">phone</a>
+            <a className='font-mono text-5xl text-secondary ' href=""></a>
         </li>
 
         <li>
-            <a className='font-mono text-5xl text-secondary' href="https://dribbble.com/enooui">dribbble</a>
+            <a className='font-mono text-5xl text-secondary hover:opacity-50 hover:text-secondary' href="https://dribbble.com/enzoobrnl">dribbble</a>
         </li>
     
     </ul>

@@ -62,7 +62,7 @@ const About = () => {
         </div>
 
         {/* Texte animé */}
-        <p className="text-3xl w-[1000px] font-serif text-primary text-justify my-10">
+        <p className=" flex flex-wrap text-3xl w-[1000px] font-serif text-primary text-justify my-10">
           Welcome let's explore a selection of my skills, and{" "}
           <motion.span
             className="opacity-50 font-sans relative cursor-pointer inline-block"

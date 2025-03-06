@@ -62,7 +62,7 @@ const VideoIntro = () => {
         controls
       >
         <source
-          src="https://raw.githubusercontent.com/enzo-buranello/video/main/buranello-enzo-crea07_DXZW82QN.mp4"
+          src="https://raw.githubusercontent.com/enzo-buranello/video/main/portfolio_video.mp4"
           type="video/mp4"
         />
         Votre navigateur ne prend pas en charge la vidéo.
