@@ -41,16 +41,16 @@ const InfoButton = () => {
                 </a>
               </p>
               <p className="font-mono text-secondary text-sm">
-                <strong>Portfolio:</strong>{" "}
-                <a
-                  href="https://dribbble.com/enzoobrnl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary hover:opacity-50 hover:text-blue"
-                >
-                 https://dribbble.com/enzoobrnl
-                </a>
-              </p>
+  <strong>Portfolio:</strong>{" "}
+  <a
+    href="https://dribbble.com/enzoobrnl"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-secondary hover:opacity-50 hover:text-secondary"
+  >
+    https://dribbble.com/enzoobrnl
+  </a>
+</p>
             </>
           )}
         </motion.div>
