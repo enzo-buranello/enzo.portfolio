@@ -43,12 +43,12 @@ const InfoButton = () => {
               <p className="font-mono text-secondary text-sm">
                 <strong>Portfolio:</strong>{" "}
                 <a
-                  href="https://dribbble.com/enooui"
+                  href="https://dribbble.com/enzoobrnl"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-secondary hover:opacity-50 hover:text-secondary"
                 >
-                 https://dribbble.com/enooui
+                 https://dribbble.com/enzoobrnl
                 </a>
               </p>
             </>

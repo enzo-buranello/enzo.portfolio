@@ -63,7 +63,7 @@ const About = () => {
 
         {/* Texte animé */}
         <p className=" flex flex-wrap text-3xl w-[1000px] font-serif text-primary text-justify my-10">
-          Welcome let's explore a selection of my skills, and{" "}
+           Welcome let's explore a selection of my skills, and{" "}
           <motion.span
             className="opacity-50 font-sans relative cursor-pointer inline-block"
             onMouseMove={handleMouseMove}
@@ -74,7 +74,7 @@ const About = () => {
           >
             the work I’ve crafted.
           </motion.span>{" "}
-          With a focus on{" "}
+           With a focus on{" "}
           <motion.span
             className="opacity-50 font-sans relative cursor-pointer inline-block"
             onMouseMove={handleMouseMove}
@@ -94,7 +94,7 @@ const About = () => {
             whileHover={{ scale: 1.05, color: "#fae1ff", opacity: 1, y: [-2, 0] }}
             transition={{ type: "spring", stiffness: 200, damping: 10 }}
           >
-            Web Development front-end
+             Web Development front-end
           </motion.span>
           ,{" "}
           <motion.span
@@ -105,7 +105,7 @@ const About = () => {
             whileHover={{ scale: 1.05, color: "#fae1ff", opacity: 1, y: [-2, 0] }}
             transition={{ type: "spring"  }}
           >
-            User Experience projects
+          User Experience projects
           </motion.span>
           , and I enjoy creating engaging visual experiences that combine creativity and functionality.
         </p>
