@@ -28,10 +28,10 @@ const Introduction = () => {
 
   return (
     <div className="flex flex-col bg-primary h-screen justify-center items-center relative">
-      <div className="flex flex-col justify-start items-start gap-10">
+      <div className="flex flex-col justify-start items-start gap-10 md:">
         {/* Premier texte */}
         <motion.h2
-          className="font-sans text-secondary text-[5rem] flex flex-row gap-7 justify-center items-center"
+          className="font-sans text-secondary text-nowrap text-[5rem] flex flex-row gap-7 justify-center items-center"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -65,7 +65,7 @@ const Introduction = () => {
           <div className="flex flex-row items-center justify-center gap-6">
             a{' '}
             <motion.span
-              className="opacity-50 relative cursor-pointer"
+              className="opacity-50 relative cursor-pointer text-nowrap"
               onMouseMove={handleMouseMoveDesign}
               onMouseEnter={handleMouseEnterDesign}
               onMouseLeave={handleMouseLeaveDesign}
@@ -107,7 +107,7 @@ const Introduction = () => {
       {/* Fenêtre flottante pour "graphic design" */}
       {isVisibleDesign && (
         <motion.div
-          className="fixed font-serif bg-white text-black px-4 py-2 rounded-lg shadow-lg"
+          className="fixed  bg-white text-black px-4 py-2 rounded-lg shadow-lg"
           style={{ top: cursorPosDesign.y + 10, left: cursorPosDesign.x + 10 }}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
